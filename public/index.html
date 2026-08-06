@@ -1,29 +1,559 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-MX">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Morgan's Pizzeria</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #1a1210;
-      color: #fdf6f0;
-      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      text-align: center;
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Morgan's Pizzeria | Dark Kitchen de Pizza Artesanal en Querétaro — Pickup y Delivery</title>
+<meta name="description" content="Morgan's Pizzeria: dark kitchen de pizza artesanal en Av. Hércules #403, Querétaro. Masa y salsa 100% caseras, solo pickup y delivery. Pide por WhatsApp al 442 111 0095. Mié-Sáb 2-9pm, Dom 2-8pm." />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#141110" />
+<link rel="canonical" href="https://publifix.github.io/morgans-pizzeria/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="restaurant.restaurant" />
+<meta property="og:site_name" content="Morgan's Pizzeria" />
+<meta property="og:title" content="Morgan's Pizzeria | Dark Kitchen de Pizza Artesanal en Querétaro" />
+<meta property="og:description" content="Sweet Pizza o' Mine 🍕🏴‍☠️🎸 — Pizza artesanal solo pickup y delivery en Av. Hércules #403, Querétaro. Pide por WhatsApp al 442 111 0095." />
+<meta property="og:url" content="https://publifix.github.io/morgans-pizzeria/" />
+<meta property="og:image" content="https://publifix.github.io/morgans-pizzeria/assets/img/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="es_MX" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Morgan's Pizzeria | Dark Kitchen de Pizza Artesanal en Querétaro" />
+<meta name="twitter:description" content="Sweet Pizza o' Mine 🍕🏴‍☠️🎸 — Solo pickup y delivery en Av. Hércules #403, Querétaro. Pide por WhatsApp al 442 111 0095." />
+<meta name="twitter:image" content="https://publifix.github.io/morgans-pizzeria/assets/img/og-image.jpg" />
+
+<!-- Icons -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Pirata+One&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+<link rel="preload" as="image" href="assets/img/hero-1024.jpg" fetchpriority="high" />
+<link rel="stylesheet" href="css/styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://publifix.github.io/morgans-pizzeria/#restaurant",
+  "name": "Morgan's Pizzeria",
+  "alternateName": "Sweet Pizza o' Mine",
+  "url": "https://publifix.github.io/morgans-pizzeria/",
+  "image": [
+    "https://publifix.github.io/morgans-pizzeria/assets/img/hero-1440.jpg",
+    "https://publifix.github.io/morgans-pizzeria/assets/img/logo.jpg"
+  ],
+  "logo": "https://publifix.github.io/morgans-pizzeria/assets/img/logo.jpg",
+  "telephone": "+52 442 111 0095",
+  "priceRange": "$150 - $340 MXN",
+  "servesCuisine": ["Pizza", "Comida Rápida"],
+  "acceptsReservations": "False",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Hércules #403",
+    "addressLocality": "Querétaro",
+    "addressRegion": "Querétaro",
+    "addressCountry": "MX"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "14:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday"],
+      "opens": "14:00",
+      "closes": "20:00"
     }
-    h1 { font-size: clamp(2rem, 6vw, 4rem); margin: 0 0 0.5rem; }
-    p { opacity: 0.7; }
-  </style>
+  ],
+  "menu": "https://publifix.github.io/morgans-pizzeria/#menu",
+  "hasMenu": {
+    "@type": "Menu",
+    "name": "Menú Morgan's Pizzeria",
+    "hasMenuSection": [
+      {
+        "@type": "MenuSection",
+        "name": "Las Plug-Inn",
+        "hasMenuItem": [
+          { "@type": "MenuItem", "name": "Corsario", "description": "Nuestra salsa y salami madurado.", "offers": { "@type": "Offer", "price": "195", "priceCurrency": "MXN" } },
+          { "@type": "MenuItem", "name": "John Fucking Rose", "description": "Nuestra salsa, tocino crocante y choncho cocinado al whisky, y ajo tatemado.", "offers": { "@type": "Offer", "price": "265", "priceCurrency": "MXN" } },
+          { "@type": "MenuItem", "name": "Florecita", "description": "Nuestra salsa original, jamón serrano, queso de cabra cremoso y un toque de romero espolvoreado.", "offers": { "@type": "Offer", "price": "240", "priceCurrency": "MXN" } },
+          { "@type": "MenuItem", "name": "La Margara Morgan", "description": "Nuestra salsa, mozzarella fresca, rodajas de jitomate, aceite de albahaca y un toque suave de orégano.", "offers": { "@type": "Offer", "price": "220", "priceCurrency": "MXN" } },
+          { "@type": "MenuItem", "name": "María María", "description": "Nuestra salsa original, jamaica espolvoreada, tocino grueso y crocante, chorizo salteado en hierro forjado, cebolla morada y chile güero en rodajas.", "offers": { "@type": "Offer", "price": "245", "priceCurrency": "MXN" } },
+          { "@type": "MenuItem", "name": "Luna Rosa", "description": "Nuestra salsa, anchoas y alcaparras.", "offers": { "@type": "Offer", "price": "265", "priceCurrency": "MXN" } },
+          { "@type": "MenuItem", "name": "Bad Obsession", "description": "Nuestra salsa, camarón y tocino crocante.", "offers": { "@type": "Offer", "price": "275", "priceCurrency": "MXN" } }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Nuevas del Tour",
+        "description": "Novedades de temporada",
+        "hasMenuItem": [
+          { "@type": "MenuItem", "name": "Sirena", "description": "Nuestra salsa, salmón ahumado, queso Philadelphia, ralladura de limón eureka y alcaparra.", "offers": { "@type": "Offer", "price": "285", "priceCurrency": "MXN" } },
+          { "@type": "MenuItem", "name": "Jungla", "description": "Base de aceite de albahaca hecho en casa con aceite de oliva, espárragos salteados, calabaza tatemada y jitomate cherry.", "offers": { "@type": "Offer", "price": "220", "priceCurrency": "MXN" } },
+          { "@type": "MenuItem", "name": "Jolly Roger", "description": "Tocinote crocante, ajo tatemado, champiñones jugosos y espinaca fresca, todo sobre nuestra salsa original hecha en casa.", "offers": { "@type": "Offer", "price": "255", "priceCurrency": "MXN" } },
+          { "@type": "MenuItem", "name": "Paraíso", "description": "Salami madurado, anchoas, champiñón fresco, jitomate bola en rodajas, alcaparras y nuestra salsa original hecha en casa.", "offers": { "@type": "Offer", "price": "340", "priceCurrency": "MXN" } }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Las Rockstars",
+        "description": "Los clásicos de siempre",
+        "hasMenuItem": [
+          { "@type": "MenuItem", "name": "Pirata", "description": "Nuestra salsa y queso (con o sin albahaca).", "offers": { "@type": "Offer", "price": "150", "priceCurrency": "MXN" } },
+          { "@type": "MenuItem", "name": "Artillero", "description": "Nuestra salsa, queso y jamón.", "offers": { "@type": "Offer", "price": "170", "priceCurrency": "MXN" } },
+          { "@type": "MenuItem", "name": "Galeón", "description": "Nuestra salsa, queso, jamón y champiñones.", "offers": { "@type": "Offer", "price": "180", "priceCurrency": "MXN" } },
+          { "@type": "MenuItem", "name": "Navegante", "description": "Nuestra salsa, chorizo y pimiento morrón.", "offers": { "@type": "Offer", "price": "175", "priceCurrency": "MXN" } },
+          { "@type": "MenuItem", "name": "Bucanero", "description": "Nuestra salsa y pepperoni.", "offers": { "@type": "Offer", "price": "180", "priceCurrency": "MXN" } },
+          { "@type": "MenuItem", "name": "Nómada", "description": "Nuestra salsa, champiñón, pimiento morrón y cebolla morada.", "offers": { "@type": "Offer", "price": "180", "priceCurrency": "MXN" } }
+        ]
+      }
+    ]
+  }
+}
+</script>
 </head>
 <body>
-  <div>
-    <h1>Morgan's Pizzeria</h1>
-    <p>Sitio en construcción — pipeline de deploy activo.</p>
+<a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+<!-- ============================= NAVBAR ============================= -->
+<header class="navbar">
+  <div class="container">
+    <a href="#inicio" class="brand">
+      <img src="assets/img/logo.jpg" width="46" height="46" alt="Morgan's Pizzeria — logotipo oficial" />
+      <span>Morgan's Pizzeria</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#menu">Menú</a>
+      <a href="#galeria">Galería</a>
+      <a href="#ubicacion">Ubicación</a>
+    </nav>
+
+    <a class="btn btn-primary nav-cta" href="https://wa.me/524421110095?text=Hola%20Morgan's%20Pizzeria%2C%20quiero%20hacer%20un%20pedido%20%F0%9F%8D%95" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.96 9.96 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm5.86 14.24c-.25.7-1.45 1.35-2 1.44-.53.09-1.15.13-1.86-.12-.43-.15-.98-.32-1.68-.63-2.96-1.28-4.89-4.26-5.04-4.46-.15-.2-1.21-1.61-1.21-3.08 0-1.46.77-2.18 1.04-2.48.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.19.01.44-.07.68.53.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.3.77 1.28 1.66 2.08 1.14 1.02 2.1 1.34 2.4 1.49.3.15.47.13.65-.08.17-.2.75-.87.95-1.17.2-.3.4-.25.68-.15.27.1 1.75.83 2.05 .98.3.15.5.22.57.35.07.13.07.75-.18 1.45Z"/></svg>
+      Ordenar por WhatsApp
+    </a>
+
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
   </div>
+</header>
+
+<nav id="mobile-menu" class="mobile-menu" aria-label="Navegación móvil">
+  <a href="#nosotros">Nosotros</a>
+  <a href="#menu">Menú</a>
+  <a href="#galeria">Galería</a>
+  <a href="#ubicacion">Ubicación</a>
+  <a class="btn btn-primary" href="https://wa.me/524421110095?text=Hola%20Morgan's%20Pizzeria%2C%20quiero%20hacer%20un%20pedido%20%F0%9F%8D%95" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.96 9.96 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm5.86 14.24c-.25.7-1.45 1.35-2 1.44-.53.09-1.15.13-1.86-.12-.43-.15-.98-.32-1.68-.63-2.96-1.28-4.89-4.26-5.04-4.46-.15-.2-1.21-1.61-1.21-3.08 0-1.46.77-2.18 1.04-2.48.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.19.01.44-.07.68.53.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.3.77 1.28 1.66 2.08 1.14 1.02 2.1 1.34 2.4 1.49.3.15.47.13.65-.08.17-.2.75-.87.95-1.17.2-.3.4-.25.68-.15.27.1 1.75.83 2.05 .98.3.15.5.22.57.35.07.13.07.75-.18 1.45Z"/></svg>
+    Ordenar por WhatsApp
+  </a>
+</nav>
+
+<main id="main">
+<!-- ============================= HERO ============================= -->
+<section class="hero" id="inicio">
+  <div class="hero-media">
+    <img
+      src="assets/img/hero-1024.jpg"
+      srcset="assets/img/hero-640.jpg 640w, assets/img/hero-1024.jpg 1024w, assets/img/hero-1440.jpg 1440w"
+      sizes="100vw"
+      alt="Pizza artesanal recién horneada con jitomate, champiñón y queso derretido, especialidad de Morgan's Pizzeria"
+      fetchpriority="high"
+      decoding="async"
+    />
+  </div>
+
+  <div class="container hero-content">
+    <img class="hero-badge" src="assets/img/logo.jpg" width="108" height="108" alt="" aria-hidden="true" loading="eager" />
+    <p class="eyebrow">Dark Kitchen · Querétaro</p>
+    <h1>Morgan's Pizzeria</h1>
+    <p class="hero-tagline">Sweet Pizza o' Mine 🍕🏴‍☠️🎸</p>
+    <p class="hero-copy">Pizza artesanal de masa y salsa 100% caseras, horneada en nuestra dark kitchen de Av. Hércules, Querétaro. Sin servicio en mesa: solo pickup y delivery, directo a tu puerta.</p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://wa.me/524421110095?text=Hola%20Morgan's%20Pizzeria%2C%20quiero%20hacer%20un%20pedido%20%F0%9F%8D%95" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.96 9.96 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm5.86 14.24c-.25.7-1.45 1.35-2 1.44-.53.09-1.15.13-1.86-.12-.43-.15-.98-.32-1.68-.63-2.96-1.28-4.89-4.26-5.04-4.46-.15-.2-1.21-1.61-1.21-3.08 0-1.46.77-2.18 1.04-2.48.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.19.01.44-.07.68.53.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.3.77 1.28 1.66 2.08 1.14 1.02 2.1 1.34 2.4 1.49.3.15.47.13.65-.08.17-.2.75-.87.95-1.17.2-.3.4-.25.68-.15.27.1 1.75.83 2.05 .98.3.15.5.22.57.35.07.13.07.75-.18 1.45Z"/></svg>
+        Ordenar por WhatsApp
+      </a>
+      <a class="btn btn-outline" href="#menu">
+        Ver Menú
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="hero-meta">
+      <div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        Mié-Sáb 2pm-9pm · Dom 2pm-8pm
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-6.1 7-11.3A7 7 0 0 0 5 9.7C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+        Av. Hércules #403, Querétaro
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+        Solo Pickup &amp; Delivery
+      </div>
+    </div>
+  </div>
+
+  <a href="#nosotros" class="scroll-cue" aria-label="Bajar a la siguiente sección">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </a>
+</section>
+
+<!-- ============================= QUIENES SOMOS ============================= -->
+<section class="about" id="nosotros">
+  <div class="container about-grid">
+    <div class="about-media reveal">
+      <img
+        src="assets/img/gallery-1-900.jpg"
+        srcset="assets/img/gallery-1-480.jpg 480w, assets/img/gallery-1-900.jpg 900w"
+        sizes="(min-width: 900px) 40vw, 90vw"
+        loading="lazy"
+        decoding="async"
+        alt="Pizza artesanal horneándose sobre piedra en el horno de leña de Morgan's Pizzeria"
+      />
+      <span class="about-media-tag">Horneada al momento</span>
+    </div>
+
+    <div class="about-copy">
+      <div class="section-head reveal">
+        <p class="eyebrow">Nuestra historia</p>
+        <h2>Una dark kitchen con alma de pirata</h2>
+      </div>
+      <p class="reveal">Morgan's Pizzeria nació como una <strong>dark kitchen</strong>: una cocina 100% enfocada en preparar y despachar pizza, sin mesas, sin salón, sin vueltas — toda la energía puesta en lo que sale del horno. Cada orden se cocina bajo pedido en nuestra cocina de Av. Hércules, en Querétaro.</p>
+      <p class="reveal reveal-delay-1">Nuestra masa lleva fermentación lenta y nuestra salsa se prepara en casa, todos los días, sin atajos. Es el mismo principio que aplicamos a todo lo demás: hacerlo bien, con carácter, sin pedir permiso.</p>
+
+      <div class="about-values">
+        <div class="about-value reveal reveal-delay-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3v18M7 8h10M5 12h14a7 7 0 0 1-14 0Z"/><circle cx="12" cy="5" r="2"/></svg>
+          <div>
+            <h3>Masa de fermentación lenta</h3>
+            <p>Trabajada y reposada como manda la tradición, no el reloj.</p>
+          </div>
+        </div>
+        <div class="about-value reveal reveal-delay-2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.2"/><path d="M12 4v3M12 17v3M4 12h3M17 12h3M6.3 6.3l2.1 2.1M15.6 15.6l2.1 2.1M17.7 6.3l-2.1 2.1M8.4 15.6l-2.1 2.1"/></svg>
+          <div>
+            <h3>Salsa 100% artesanal</h3>
+            <p>Receta propia, hecha en casa cada día, sin conservadores de más.</p>
+          </div>
+        </div>
+        <div class="about-value reveal reveal-delay-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
+          <div>
+            <h3>Solo pickup &amp; delivery</h3>
+            <p>Sin servicio en mesa: cocina exclusiva para llevar y para recibir en tu puerta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= MENU ============================= -->
+<section class="menu" id="menu">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow">El menú</p>
+      <h2>Nuestro Menú</h2>
+      <p>Todas nuestras pizzas están hechas con salsa y masa artesanal.</p>
+    </div>
+
+    <!-- Las Plug-Inn -->
+    <div class="menu-category">
+      <div class="menu-category-head reveal">
+        <h3>Las Plug-Inn</h3>
+      </div>
+      <div class="menu-grid">
+        <article class="pizza-card reveal">
+          <div class="pizza-card-top"><h4>Corsario</h4><span class="pizza-price">$195</span></div>
+          <p class="pizza-ingredients">Nuestra salsa y salami madurado.</p>
+          <p class="pizza-tagline">Un clásico con actitud.</p>
+        </article>
+        <article class="pizza-card reveal reveal-delay-1">
+          <div class="pizza-card-top"><h4>John Fucking Rose</h4><span class="pizza-price">$265</span></div>
+          <p class="pizza-ingredients">Nuestra salsa, tocino crocante y choncho cocinado al whisky, y ajo tatemado.</p>
+          <p class="pizza-tagline">Profunda, fuerte, indomable, inolvidable, como el solo de una buena canción.</p>
+        </article>
+        <article class="pizza-card reveal reveal-delay-2">
+          <div class="pizza-card-top"><h4>Florecita</h4><span class="pizza-price">$240</span></div>
+          <p class="pizza-ingredients">Nuestra salsa original, jamón serrano, queso de cabra cremoso y un toque de romero espolvoreado.</p>
+          <p class="pizza-tagline">Una combinación elegante y perfectamente balanceada.</p>
+        </article>
+        <article class="pizza-card reveal">
+          <div class="pizza-card-top"><h4>La Margara Morgan</h4><span class="pizza-price">$220</span></div>
+          <p class="pizza-ingredients">Nuestra salsa, mozzarella fresca, rodajas de jitomate, aceite de albahaca y un toque suave de orégano.</p>
+          <p class="pizza-tagline">Sencilla y con alma.</p>
+        </article>
+        <article class="pizza-card reveal reveal-delay-1">
+          <div class="pizza-card-top"><h4>María María</h4><span class="pizza-price">$245</span></div>
+          <p class="pizza-ingredients">Nuestra salsa original, jamaica espolvoreada, tocino grueso y crocante, chorizo salteado en hierro forjado, cebolla morada y chile güero en rodajas.</p>
+          <p class="pizza-tagline">Siempre amadas Las Marías, dulces y picantes, un mix que prende.</p>
+        </article>
+        <article class="pizza-card reveal reveal-delay-2">
+          <div class="pizza-card-top"><h4>Luna Rosa</h4><span class="pizza-price">$265</span></div>
+          <p class="pizza-ingredients">Nuestra salsa, anchoas y alcaparras.</p>
+          <p class="pizza-tagline">Un sabor potente que no se olvida.</p>
+        </article>
+        <article class="pizza-card reveal">
+          <div class="pizza-card-top"><h4>Bad Obsession</h4><span class="pizza-price">$275</span></div>
+          <p class="pizza-ingredients">Nuestra salsa, camarón y tocino crocante.</p>
+          <p class="pizza-tagline">Para intensidad. Puro antojo.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="divider-nautical reveal" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="6" r="2.2"/><path d="M12 8.5V17M8 13H5a7 7 0 0 0 7 6 7 7 0 0 0 7-6h-3M9 11l3-2 3 2"/></svg>
+    </div>
+
+    <!-- Nuevas del Tour -->
+    <div class="menu-category">
+      <div class="menu-category-head reveal">
+        <h3>Nuevas del Tour</h3>
+        <span class="menu-category-sub">Novedades de temporada</span>
+      </div>
+      <div class="menu-grid">
+        <article class="pizza-card reveal">
+          <div class="pizza-card-top"><h4>Sirena</h4><span class="pizza-price">$285</span></div>
+          <p class="pizza-ingredients">Nuestra salsa, salmón ahumado, queso Philadelphia, ralladura de limón eureka y alcaparra.</p>
+          <p class="pizza-tagline">Todo pirata necesita su sirena: suave y salvaje a la vez.</p>
+        </article>
+        <article class="pizza-card reveal reveal-delay-1">
+          <div class="pizza-card-top"><h4>Jungla</h4><span class="pizza-price">$220</span></div>
+          <p class="pizza-ingredients">Base de aceite de albahaca hecho en casa con aceite de oliva, espárragos salteados, calabaza tatemada y jitomate cherry.</p>
+          <p class="pizza-tagline">Sin culpas, girly n' fit.</p>
+        </article>
+        <article class="pizza-card reveal reveal-delay-2">
+          <div class="pizza-card-top"><h4>Jolly Roger</h4><span class="pizza-price">$255</span></div>
+          <p class="pizza-ingredients">Tocinote crocante, ajo tatemado, champiñones jugosos y espinaca fresca, todo sobre nuestra salsa original hecha en casa.</p>
+        </article>
+        <article class="pizza-card reveal">
+          <span class="pizza-badge">★ Favorita</span>
+          <div class="pizza-card-top"><h4>Paraíso</h4><span class="pizza-price">$340</span></div>
+          <p class="pizza-ingredients">Salami madurado, anchoas, champiñón fresco, jitomate bola en rodajas, alcaparras y nuestra salsa original hecha en casa.</p>
+          <p class="pizza-tagline">Intensamente sabrosa, para paladares que se atreven.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="divider-nautical reveal" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20c2-9 4-13 8-16 4 3 6 7 8 16" /><path d="M4 20h16M9 20c0-3 1.3-5 3-6 1.7 1 3 3 3 6"/></svg>
+    </div>
+
+    <!-- Las Rockstars -->
+    <div class="menu-category">
+      <div class="menu-category-head reveal">
+        <h3>Las Rockstars</h3>
+        <span class="menu-category-sub">Los clásicos de siempre</span>
+      </div>
+      <div class="menu-grid">
+        <article class="pizza-card reveal">
+          <div class="pizza-card-top"><h4>Pirata</h4><span class="pizza-price">$150</span></div>
+          <p class="pizza-ingredients">Nuestra salsa y queso (con o sin albahaca).</p>
+        </article>
+        <article class="pizza-card reveal reveal-delay-1">
+          <div class="pizza-card-top"><h4>Artillero</h4><span class="pizza-price">$170</span></div>
+          <p class="pizza-ingredients">Nuestra salsa, queso y jamón.</p>
+          <p class="pizza-tagline">Sencilla y poderosa.</p>
+        </article>
+        <article class="pizza-card reveal reveal-delay-2">
+          <div class="pizza-card-top"><h4>Galeón</h4><span class="pizza-price">$180</span></div>
+          <p class="pizza-ingredients">Nuestra salsa, queso, jamón y champiñones.</p>
+          <p class="pizza-tagline">Navega directo al sabor.</p>
+        </article>
+        <article class="pizza-card reveal">
+          <div class="pizza-card-top"><h4>Navegante</h4><span class="pizza-price">$175</span></div>
+          <p class="pizza-ingredients">Nuestra salsa, chorizo y pimiento morrón.</p>
+          <p class="pizza-tagline">Una pizza para los que van sin freno.</p>
+        </article>
+        <article class="pizza-card reveal reveal-delay-1">
+          <div class="pizza-card-top"><h4>Bucanero</h4><span class="pizza-price">$180</span></div>
+          <p class="pizza-ingredients">Nuestra salsa y pepperoni.</p>
+          <p class="pizza-tagline">Directa al grano, intensa e indomable.</p>
+        </article>
+        <article class="pizza-card reveal reveal-delay-2">
+          <div class="pizza-card-top"><h4>Nómada</h4><span class="pizza-price">$180</span></div>
+          <p class="pizza-ingredients">Nuestra salsa, champiñón, pimiento morrón y cebolla morada.</p>
+        </article>
+      </div>
+    </div>
+
+    <p class="menu-note reveal">Precios en pesos mexicanos (MXN). Pregunta por ingredientes extra al hacer tu pedido por WhatsApp.</p>
+  </div>
+</section>
+
+<!-- ============================= GALERIA ============================= -->
+<section class="gallery" id="galeria">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Directo del horno</p>
+      <h2>Galería</h2>
+      <p>Un vistazo a lo que sale de nuestra cocina, todos los días de la semana.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item reveal">
+        <img src="assets/img/gallery-1-900.jpg" srcset="assets/img/gallery-1-480.jpg 480w, assets/img/gallery-1-900.jpg 900w" sizes="(min-width: 720px) 33vw, 50vw" loading="lazy" decoding="async" alt="Pizza artesanal horneándose en el horno de leña de Morgan's Pizzeria" />
+        <figcaption>Al horno de leña</figcaption>
+      </figure>
+      <figure class="gallery-item reveal reveal-delay-1">
+        <img src="assets/img/gallery-2-900.jpg" srcset="assets/img/gallery-2-480.jpg 480w, assets/img/gallery-2-900.jpg 900w" sizes="(min-width: 720px) 33vw, 50vw" loading="lazy" decoding="async" alt="Pizza con jitomate y mozzarella fresca recién horneada, estilo Morgan's Pizzeria" />
+        <figcaption>Mozzarella fresca</figcaption>
+      </figure>
+      <figure class="gallery-item reveal reveal-delay-2">
+        <img src="assets/img/gallery-3-900.jpg" srcset="assets/img/gallery-3-480.jpg 480w, assets/img/gallery-3-900.jpg 900w" sizes="(min-width: 720px) 33vw, 100vw" loading="lazy" decoding="async" alt="Rebanada de pizza con queso derretido siendo levantada de la charola" />
+        <figcaption>Queso que se estira</figcaption>
+      </figure>
+      <figure class="gallery-item reveal">
+        <img src="assets/img/gallery-4-900.jpg" srcset="assets/img/gallery-4-480.jpg 480w, assets/img/gallery-4-900.jpg 900w" sizes="(min-width: 720px) 33vw, 50vw" loading="lazy" decoding="async" alt="Pizza Morgan's Pizzeria con champiñones, pimiento morrón y cebolla morada" />
+        <figcaption>Vegetales frescos</figcaption>
+      </figure>
+      <figure class="gallery-item reveal reveal-delay-1">
+        <img src="assets/img/gallery-5-900.jpg" srcset="assets/img/gallery-5-480.jpg 480w, assets/img/gallery-5-900.jpg 900w" sizes="(min-width: 720px) 33vw, 50vw" loading="lazy" decoding="async" alt="Pizza de camarón y tocino de Morgan's Pizzeria recién horneada" />
+        <figcaption>Camarón &amp; tocino</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= HORARIOS Y UBICACION ============================= -->
+<section class="info" id="ubicacion">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Horarios &amp; ubicación</p>
+      <h2>Encuéntranos</h2>
+      <p>Cocinamos bajo pedido — sin servicio en mesa. Pickup en tienda o delivery directo a tu puerta.</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card reveal">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          Horario
+        </h3>
+        <div class="schedule-list">
+          <div class="schedule-row"><span>Miércoles – Sábado</span><span>2:00 pm – 9:00 pm</span></div>
+          <div class="schedule-row"><span>Domingo</span><span>2:00 pm – 8:00 pm</span></div>
+          <div class="schedule-row is-closed"><span>Lunes – Martes</span><span>Cerrado</span></div>
+        </div>
+        <span class="model-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+          Solo Pickup &amp; Delivery — sin servicio en mesa
+        </span>
+      </div>
+
+      <div class="info-card reveal reveal-delay-1">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-6.1 7-11.3A7 7 0 0 0 5 9.7C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+          Ubicación
+        </h3>
+        <div class="address-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-6.1 7-11.3A7 7 0 0 0 5 9.7C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+          <p>Av. Hércules #403, Querétaro, Qro.</p>
+        </div>
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps?q=Av.%20H%C3%A9rcules%20403%2C%20Quer%C3%A9taro%2C%20Qro.&output=embed"
+            title="Mapa de ubicación de Morgan's Pizzeria en Av. Hércules #403, Querétaro"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/logo.jpg" width="64" height="64" alt="Morgan's Pizzeria — logotipo oficial" loading="lazy" />
+        <p class="footer-tagline">Sweet Pizza o' Mine 🍕🏴‍☠️🎸</p>
+        <p>Dark kitchen de pizza artesanal en Querétaro. Masa y salsa 100% caseras, solo pickup y delivery.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li>
+            <a href="https://wa.me/524421110095?text=Hola%20Morgan's%20Pizzeria%2C%20quiero%20hacer%20un%20pedido%20%F0%9F%8D%95" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.96 9.96 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm5.86 14.24c-.25.7-1.45 1.35-2 1.44-.53.09-1.15.13-1.86-.12-.43-.15-.98-.32-1.68-.63-2.96-1.28-4.89-4.26-5.04-4.46-.15-.2-1.21-1.61-1.21-3.08 0-1.46.77-2.18 1.04-2.48.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.19.01.44-.07.68.53.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.3.77 1.28 1.66 2.08 1.14 1.02 2.1 1.34 2.4 1.49.3.15.47.13.65-.08.17-.2.75-.87.95-1.17.2-.3.4-.25.68-.15.27.1 1.75.83 2.05 .98.3.15.5.22.57.35.07.13.07.75-.18 1.45Z"/></svg>
+              442 111 0095
+            </a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-6.1 7-11.3A7 7 0 0 0 5 9.7C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+            <span>Av. Hércules #403, Querétaro</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Horario</h4>
+        <ul>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <span>Mié – Sáb: 2pm – 9pm</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <span>Domingo: 2pm – 8pm</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            <span>Solo Pickup &amp; Delivery</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Síguenos</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram de Morgan's Pizzeria">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook de Morgan's Pizzeria">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 9h3V6h-3a3 3 0 0 0-3 3v2H9v3h2v6h3v-6h3l1-3h-4V9a1 1 0 0 1 1-1Z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok de Morgan's Pizzeria">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M15 3v10.5a3.5 3.5 0 1 1-3.5-3.5H12M15 3a5 5 0 0 0 5 5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="current-year">2026</span> Morgan's Pizzeria. Todos los derechos reservados.</span>
+      <span>Dark kitchen · Querétaro, México</span>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/524421110095?text=Hola%20Morgan's%20Pizzeria%2C%20quiero%20hacer%20un%20pedido%20%F0%9F%8D%95" target="_blank" rel="noopener noreferrer" aria-label="Ordenar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.96 9.96 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm5.86 14.24c-.25.7-1.45 1.35-2 1.44-.53.09-1.15.13-1.86-.12-.43-.15-.98-.32-1.68-.63-2.96-1.28-4.89-4.26-5.04-4.46-.15-.2-1.21-1.61-1.21-3.08 0-1.46.77-2.18 1.04-2.48.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.19.01.44-.07.68.53.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.3.77 1.28 1.66 2.08 1.14 1.02 2.1 1.34 2.4 1.49.3.15.47.13.65-.08.17-.2.75-.87.95-1.17.2-.3.4-.25.68-.15.27.1 1.75.83 2.05 .98.3.15.5.22.57.35.07.13.07.75-.18 1.45Z"/></svg>
+</a>
+
+<script src="js/main.js" defer></script>
 </body>
 </html>
