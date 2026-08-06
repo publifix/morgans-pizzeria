@@ -35,6 +35,7 @@
    Reset & base
    ========================================================================== */
 *, *::before, *::after { box-sizing: border-box; }
+figure { margin: 0; }
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 84px;
@@ -250,11 +251,11 @@ input:focus-visible {
   font-size: 1.05rem;
 }
 .logo-mark {
-  height: 40px;
+  height: 54px;
   width: auto;
   display: block;
 }
-.logo-mark-footer { height: 52px; }
+.logo-mark-footer { height: 66px; }
 .nav-links {
   display: none;
   align-items: center;
@@ -624,7 +625,7 @@ input:focus-visible {
 }
 .gallery-grid {
   display: grid;
-  gap: 18px;
+  gap: 14px;
   grid-template-columns: repeat(2, 1fr);
 }
 .gallery-item {
@@ -632,8 +633,9 @@ input:focus-visible {
   overflow: hidden;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
 }
+.gallery-item:last-child { grid-column: span 2; aspect-ratio: 16 / 8; }
 .gallery-item img {
   width: 100%;
   height: 100%;
@@ -657,11 +659,12 @@ input:focus-visible {
   opacity: 1;
   transform: translateY(0);
 }
-.gallery-item:nth-child(3) { grid-column: span 2; aspect-ratio: 16 / 9; }
-@media (min-width: 720px) {
-  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-  .gallery-item:nth-child(3) { grid-column: span 1; aspect-ratio: 4/5; }
-  .gallery-item:nth-child(1) { grid-row: span 2; aspect-ratio: 4/6.5; }
+@media (min-width: 640px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .gallery-item:last-child { grid-column: span 1; aspect-ratio: 1 / 1; }
+}
+@media (min-width: 1000px) {
+  .gallery-grid { grid-template-columns: repeat(5, 1fr); gap: 18px; }
 }
 
 /* ==========================================================================
